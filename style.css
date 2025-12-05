@@ -26,7 +26,7 @@ input {
 }
 
 /* FLEX-CENTER */
-html, body, header, header nav, main, main section, section.hero .info {
+html, body, header, header nav, main, main section, section.hero .info, section.services .textBox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,6 +100,8 @@ main section {
     border: 2px green solid;
 }
 
+/* HERO SECTION */
+
 section.hero {
     position: relative;
     background-color: #F9E6D0;
@@ -145,7 +147,9 @@ section.hero .info p {
     margin-bottom: 45px;
 }
 
-section.hero .info button {
+section.hero .info button,
+section.about .textBox button,
+section.services .cardBox article .textBox button {
     background-color: #00373E;
     color: #fff;
     border-radius: 100px;
@@ -153,9 +157,150 @@ section.hero .info button {
     font-size: 20px;
     letter-spacing: 0.5px;
     padding: 16px 40px;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-section.hero .info button:hover {
+section.hero .info button:hover,
+section.about .textBox button:hover {
     background-color: rgba(0, 55, 62, 0.8);
+}
+
+/* ABOUT SECTION */
+
+section.about {
+    justify-content: space-between;
+}
+
+section.about .textBox,
+section.services .textBox {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    color: #00373E;
+    gap: 38px;
+}
+
+section.about .textBox h2,
+section.services .textBox h2 {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+section.about .textBox p.titleText,
+section.services .textBox p.titleText {
+    font-weight: bold;
+    font-size: 52px;
+    width: 60%;
+}
+
+section.about .textBox p.descriptionText,
+section.services .textBox p.descriptionText {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    width: 60%;
+}
+
+section.about img{
+    padding: 70px 68px 0px 68px;
+    background-color: #00373E;
+    border-radius: 60px;
+}
+
+/* SERVICES SECTION */
+
+section.services {
+    flex-direction: column;
+    gap: 80px;
+}
+
+section.services .textBox {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.services .textBox h2, p {
+    text-align: center;
+}
+
+section.services .textBox p.descriptionText {
+    width: 70%;
+}
+
+section.services .cardBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* две колонки */
+    gap: 40px;
+}
+
+section.services .cardBox article {
+    position: relative;
+    display: flex;
+    border-radius: 60px;
+    overflow: hidden;
+    padding: 75px 0px 60px 80px;
+    background-color: #fff;
+}
+
+section.services .cardBox article img {
+    position: absolute;
+}
+
+section.services .cardBox article:nth-child(1) {
+    background-color: #F9E6D0;
+    padding: 75px 50px 60px 80px;
+}
+
+section.services .cardBox article:nth-child(1) img {
+    right: 50px;
+    bottom: 75px;
+}
+
+section.services .cardBox article:nth-child(1) p.descriptionText {
+    width: 60%;
+}
+
+section.services .cardBox article:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+section.services .cardBox article:nth-child(3) img {
+    right: 0;
+    bottom: 0;
+}
+
+section.services .cardBox article .textBox {
+    align-items: start;
+    justify-content: start;
+    gap: 35px;
+}
+
+section.services .cardBox article .textBox p {
+    text-align: start;
+}
+
+section.services .cardBox article .textBox p.titleText {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+section.services .cardBox article .textBox p.descriptionText {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+section.services .cardBox article .textBox button {
+    border: 1px #00373E solid;
+    background-color: transparent;
+    color: #00373E;
+}
+
+section.services .cardBox article .textBox button:hover {
+    background-color: #00373E;
+    color: #fff;
 }

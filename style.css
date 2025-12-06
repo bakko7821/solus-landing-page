@@ -189,7 +189,7 @@ section.services .textBox h2 {
 }
 
 section.about .textBox p.titleText,
-section.services .textBox p.titleText {
+section.services .textBox p.titleText {    
     font-weight: bold;
     font-size: 52px;
     width: 60%;
@@ -223,7 +223,8 @@ section.services .textBox {
     gap: 20px;
 }
 
-section.services .textBox h2, p {
+section.services .textBox h2, 
+section.services .textBox p {
     text-align: center;
 }
 
@@ -292,6 +293,10 @@ section.services .cardBox article .textBox p.descriptionText {
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
+}
+
+section.services .cardBox article:nth-child(3) .textBox p.descriptionText {
+    width: 60%;
 }
 
 section.services .cardBox article .textBox button {

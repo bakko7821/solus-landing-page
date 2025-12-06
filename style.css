@@ -26,7 +26,8 @@ input {
 }
 
 /* FLEX-CENTER */
-html, body, header, header nav, main, main section, section.hero .info, section.services .textBox {
+html, body, header, header nav, main, main section, section.hero .info, section.services .textBox, section.testimonials, 
+section.testimonials .sliderButtonsBox button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,7 +173,8 @@ section.about {
 }
 
 section.about .textBox,
-section.services .textBox {
+section.services .textBox,
+section.testimonials .textBox {
     display: flex;
     align-items: start;
     justify-content: start;
@@ -182,21 +184,24 @@ section.services .textBox {
 }
 
 section.about .textBox h2,
-section.services .textBox h2 {
+section.services .textBox h2,
+section.testimonials .textBox h2 {
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
 }
 
 section.about .textBox p.titleText,
-section.services .textBox p.titleText {    
+section.services .textBox p.titleText,
+section.testimonials .textBox p.titleText {    
     font-weight: bold;
     font-size: 52px;
     width: 60%;
 }
 
 section.about .textBox p.descriptionText,
-section.services .textBox p.descriptionText {
+section.services .textBox p.descriptionText,
+section.testimonials .textBox p.descriptionText {
     font-weight: 400;
     font-size: 22px;
     line-height: 34px;
@@ -308,4 +313,75 @@ section.services .cardBox article .textBox button {
 section.services .cardBox article .textBox button:hover {
     background-color: #00373E;
     color: #fff;
+}
+
+/* TESTIMONIALS SECTION */
+section.testimonials {
+    justify-content: start;
+    overflow: hidden;
+    position: relative;
+}
+
+section.testimonials .sliderButtonsBox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+section.testimonials .textBox {
+    width: 50%;
+}
+
+section.testimonials .sliderButtonsBox button {
+    border-radius: 100px;
+    width: 54px;
+    height: 54px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+section.testimonials .sliderButtonsBox button:hover {
+    transform: scale(1.1);
+}
+
+section.testimonials .sliderButtonsBox button:nth-child(1) svg{
+    transform: rotate(180deg);
+}
+
+section.testimonials .sliderButtonsBox button:nth-child(2) {
+    background-color: #00373E;
+}
+
+section.testimonials .leftBox {
+    right: -100px;
+    position: absolute;
+    display: flex;
+    gap: 40px;
+}
+
+section.testimonials .leftBox article {
+    width: 393px;
+    height: 393px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 65px 50px 60px 50px;
+    border-radius: 60px;
+    background-color: #F9E6D0;
+}
+
+section.testimonials .leftBox article:nth-child(2) {
+    background-color: #00373E;
+}
+
+section.testimonials .leftBox article .infoText,
+section.testimonials .leftBox article .author {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+}
+
+section.testimonials .leftBox article:nth-child(1) .infoText,
+section.testimonials .leftBox article:nth-child(1) .author {
+    color: #00373E;
 }

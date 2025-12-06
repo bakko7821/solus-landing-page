@@ -27,7 +27,7 @@ input {
 
 /* FLEX-CENTER */
 html, body, header, header nav, main, main section, section.hero .info, section.services .textBox, section.testimonials, 
-section.testimonials .sliderButtonsBox button {
+section.testimonials .sliderButtonsBox button, section.partners {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -384,4 +384,24 @@ section.testimonials .leftBox article .author {
 section.testimonials .leftBox article:nth-child(1) .infoText,
 section.testimonials .leftBox article:nth-child(1) .author {
     color: #00373E;
+}
+
+/* PARTNERS SECTION */
+
+section.partners {
+    background-color: #fff;
+    border-radius: 60px;
+    gap: 40px;
+    padding: 60px;
+}
+
+section.partners a {
+    transition: transform 0.5s;
+    color: #00373E;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+section.partners a:hover {
+    transform: scale(1.1);
 }

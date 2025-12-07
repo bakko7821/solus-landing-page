@@ -27,7 +27,7 @@ input {
 
 /* FLEX-CENTER */
 html, body, header, header nav, main, main section, section.hero .info, section.services .textBox, section.testimonials, 
-section.testimonials .sliderButtonsBox button, section.partners {
+section.testimonials .sliderButtonsBox button, section.partners, section.resources, section.resources .textBox, section.resources .cardBox article {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +150,8 @@ section.hero .info p {
 
 section.hero .info button,
 section.about .textBox button,
-section.services .cardBox article .textBox button {
+section.services .cardBox article .textBox button,
+section.community .textBox button {
     background-color: #00373E;
     color: #fff;
     border-radius: 100px;
@@ -162,7 +163,8 @@ section.services .cardBox article .textBox button {
 }
 
 section.hero .info button:hover,
-section.about .textBox button:hover {
+section.about .textBox button:hover,
+section.community .textBox button:hover {
     background-color: rgba(0, 55, 62, 0.8);
 }
 
@@ -174,7 +176,8 @@ section.about {
 
 section.about .textBox,
 section.services .textBox,
-section.testimonials .textBox {
+section.testimonials .textBox,
+section.community .textBox {
     display: flex;
     align-items: start;
     justify-content: start;
@@ -185,7 +188,9 @@ section.testimonials .textBox {
 
 section.about .textBox h2,
 section.services .textBox h2,
-section.testimonials .textBox h2 {
+section.testimonials .textBox h2,
+section.resources .textBox h2,
+section.community .textBox h2 {
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -193,7 +198,9 @@ section.testimonials .textBox h2 {
 
 section.about .textBox p.titleText,
 section.services .textBox p.titleText,
-section.testimonials .textBox p.titleText {    
+section.testimonials .textBox p.titleText,    
+section.resources .textBox p.titleText,
+section.community .textBox p.titleText {    
     font-weight: bold;
     font-size: 52px;
     width: 60%;
@@ -201,7 +208,9 @@ section.testimonials .textBox p.titleText {
 
 section.about .textBox p.descriptionText,
 section.services .textBox p.descriptionText,
-section.testimonials .textBox p.descriptionText {
+section.testimonials .textBox p.descriptionText,
+section.resources .textBox p.descriptionText,
+section.community .textBox p.descriptionText {
     font-weight: 400;
     font-size: 22px;
     line-height: 34px;
@@ -229,7 +238,9 @@ section.services .textBox {
 }
 
 section.services .textBox h2, 
-section.services .textBox p {
+section.services .textBox p,
+section.resources .textBox h2,
+section.resources .textBox p {
     text-align: center;
 }
 
@@ -404,4 +415,82 @@ section.partners a {
 
 section.partners a:hover {
     transform: scale(1.1);
+}
+
+/* RESOURCES SECTION */
+
+section.resources, section.resources .textBox {
+    color: #00373E;
+    flex-direction: column;
+}
+
+section.resources {
+    gap: 80px;
+}
+
+section.resources .cardBox {
+    display: flex;
+    gap: 40px;
+}
+
+section.resources .cardBox article {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 60px 40px;
+    border-radius: 60px;
+    background-color: #fff;
+}
+
+section.resources .cardBox article button {
+    padding: 16px 40px;
+    margin-top: 60px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #EFC01D;
+    transition: transform 0.5s;
+}
+
+section.resources .cardBox article:nth-child(2) button {
+    background-color: #4CCBBB;
+}
+
+section.resources .cardBox article:nth-child(3) button {
+    background-color: #F39CAC;
+}
+
+section.resources .cardBox article button:hover {
+    transform: scale(1.1);
+}
+
+section.resources .cardBox article .titleText {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+section.resources .cardBox article .descriptionText {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* COMMUNITY SECTION */
+
+section.community {
+    justify-content: start;
+    position: relative;
+    padding: 70px 0px 90px 60px;
+    border-radius: 60px;
+    background-color: #fff;
+}
+
+section.community .textBox {
+    width: 60%;
+}
+
+section.community img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

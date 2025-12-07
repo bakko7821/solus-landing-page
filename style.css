@@ -27,7 +27,7 @@ input {
 
 /* FLEX-CENTER */
 html, body, header, header nav, main, main section, section.hero .info, section.services .textBox, section.testimonials, 
-section.testimonials .sliderButtonsBox button, section.partners, section.resources, section.resources .textBox, section.resources .cardBox article {
+section.testimonials .sliderButtonsBox button, section.partners, section.resources, section.resources .textBox, section.resources .cardBox article, section.faq, section.faq .faqList article button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,10 +174,7 @@ section.about {
     justify-content: space-between;
 }
 
-section.about .textBox,
-section.services .textBox,
-section.testimonials .textBox,
-section.community .textBox {
+.textBox {
     display: flex;
     align-items: start;
     justify-content: start;
@@ -186,31 +183,19 @@ section.community .textBox {
     gap: 38px;
 }
 
-section.about .textBox h2,
-section.services .textBox h2,
-section.testimonials .textBox h2,
-section.resources .textBox h2,
-section.community .textBox h2 {
+.textBox h2 {
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
 }
 
-section.about .textBox p.titleText,
-section.services .textBox p.titleText,
-section.testimonials .textBox p.titleText,    
-section.resources .textBox p.titleText,
-section.community .textBox p.titleText {    
+.textBox p.titleText {    
     font-weight: bold;
     font-size: 52px;
     width: 60%;
 }
 
-section.about .textBox p.descriptionText,
-section.services .textBox p.descriptionText,
-section.testimonials .textBox p.descriptionText,
-section.resources .textBox p.descriptionText,
-section.community .textBox p.descriptionText {
+.textBox p.descriptionText {
     font-weight: 400;
     font-size: 22px;
     line-height: 34px;
@@ -435,6 +420,7 @@ section.resources .cardBox {
 
 section.resources .cardBox article {
     flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     gap: 20px;
     padding: 60px 40px;
@@ -493,4 +479,105 @@ section.community img {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+/* FAQ SECTION */
+
+section.faq {
+    gap: 50px;
+}
+
+section.faq .leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+section.faq .leftBox .textBox,
+section.faq .leftBox .textBox h2,
+section.faq .leftBox .textBox p.titleText,
+section.faq .leftBox .textBox p.descriptionText {
+    width: 100%;
+}
+
+section.faq .leftBox .textBox {
+    padding-left: 50px;
+}
+
+section.faq .faqList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.faq .faqList article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px 40px 30px 50px;
+}
+
+section.faq .faqList article p {
+    font-size: 20px;
+    line-height: 34px;
+    color: #00373E;
+    font-weight: 500;
+}
+
+section.faq .faqList article button {
+    padding: 12px;
+    border-radius: 1000px;
+    background-color: #F7F6F4;
+    transition: transform 0.5s;
+}
+
+section.faq .faqList article button:hover {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 2px blue solid;
+}
+
+footer .leftCard,
+footer .rightCard {
+    padding: 40px 60px 65px 60px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+footer .rightCard {
+    padding: 75px 70px 70px 70px;
+    background-color: #00373E;
+}
+
+footer .rightCard img {
+    position: absolute;
+    right: 0;
+    top: 36px;
+}
+
+footer .leftCard  .linksBox {
+    display: flex;
+    justify-content: center;      /* центрируем все столбцы */
+    align-items: flex-start;      /* <-- ВОТ ЭТО главное: выравнивание по верхнему краю */
+    gap: 40px;                    /* расстояние между колонками */
+}
+
+footer .leftCard  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                    /* расстояние между ссылками */
 }
